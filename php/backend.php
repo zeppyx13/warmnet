@@ -25,7 +25,7 @@ function registrasi($data)
     if (mysqli_fetch_assoc($result)) {
         echo "
         <script>
-        alert('no telphone sudah digunakan')
+        alert('Email sudah di sudah digunakan')
         </script>
         ";
         return false;
