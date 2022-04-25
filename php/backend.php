@@ -18,6 +18,7 @@ function registrasi($data)
     global $konek;
 
     $nama = mysqli_real_escape_string($konek, $data["nama"]);
+    $tlp = mysqli_real_escape_string($konek, $data["tlp"]);
     $email = ($data["email"]);
     $password = mysqli_real_escape_string($konek, $data["password"]);
     $password2 = mysqli_real_escape_string($konek, $data["password2"]);
@@ -40,7 +41,7 @@ function registrasi($data)
     }
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_query($konek, "INSERT INTO pelanggan VALUES('user','','$nama','$password','$email')");
+    mysqli_query($konek, "INSERT INTO pelanggan VALUES('user','','$nama','$password','$email','$tlp')");
 
     return mysqli_affected_rows($konek);
 }
