@@ -57,9 +57,9 @@
 <body class="main-layout">
    <!-- loader  -->
 
-   <div class="loader_bg">
+   <!-- <div class="loader_bg">
       <div class="loader"><img src="landing/images/loding2.gif" alt="#" /></div>
-   </div>
+   </div> -->
 
    <!-- end loader -->
    <!-- header -->
@@ -91,9 +91,6 @@
                               <a class="nav-link" href="#paket">Paket</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#diskon">Diskon</a>
-                           </li>
-                           <li class="nav-item">
                               <a class="nav-link" href="#contact">Contact Us</a>
                            </li>
                            <li class="nav-item d_none">
@@ -116,8 +113,6 @@
             <li data-target="#banner1" data-slide-to="0" class="active"></li>
             <li data-target="#banner1" data-slide-to="1"></li>
             <li data-target="#banner1" data-slide-to="2"></li>
-            <li data-target="#banner1" data-slide-to="3"></li>
-            <li data-target="#banner1" data-slide-to="4"></li>
          </ol>
          <div class="carousel-inner">
             <div class="carousel-item active">
@@ -129,7 +124,7 @@
                               <span>Menyewakan computer</span>
                               <h1>Accessories</h1>
                               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="#">Boking </a> <a href="contact.html">Contact </a>
+                              <a href="reservation.php">Boking </a>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -150,7 +145,7 @@
                               <span>Menyewakan computer</span>
                               <h1>Accessories</h1>
                               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                              <a href="reservation.php">Boking </a>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -171,49 +166,7 @@
                               <span>Menyewakan computer</span>
                               <h1>Accessories</h1>
                               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="text_img">
-                              <figure><img src="landing/images/pct.png" alt="#" /></figure>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container">
-                  <div class="carousel-caption">
-                     <div class="row">
-                        <div class="col-md-6">
-                           <div class="text-bg">
-                              <span>Menyewakan computer</span>
-                              <h1>Accessories</h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="text_img">
-                              <figure><img src="landing/images/pct.png" alt="#" /></figure>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container">
-                  <div class="carousel-caption">
-                     <div class="row">
-                        <div class="col-md-6">
-                           <div class="text-bg">
-                              <span>Menyewakan computer</span>
-                              <h1>Accessories</h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                              <a href="reservation.php">Boking </a>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -242,24 +195,24 @@
          <div class="container">
             <div class="row">
                <div class="col-md-4">
-                  <div class="box_text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                  <div class="box_text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                      <i><img src="landing/images/thr.png" alt="#" /></i>
-                     <h3>Paket kami (1)</h3>
-                     <p>Kami memberikan pelayanan yang terbaik kepada anda semoga terhibur dengan paket kami. </p>
+                     <h3>Paket hemat </h3>
+                     <p>Paket Hemat,mulai dari Rp 5.000/jam kamu sudah bisa menghindari pc kentang mu yang ada di rumah yahahah </p>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="box_text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="box_text" data-aos-offset="300" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                      <i><img src="landing/images/thr.png" alt="#" /></i>
-                     <h3>Paket kami (2)</h3>
-                     <p>Kami memberikan pelayanan yang terbaik kepada anda semoga terhibur dengan paket kami. </p>
+                     <h3>Paket Panas</h3>
+                     <p>Pilih nasi goreng apa ke warnet?. hanya mulai dari Rp 10.000/jam kamu mendapat pelayanan VIP serasa orang penting dan lebih berkasta dari yang mesen paket hemat </p>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="box_text" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                  <div class="box_text" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                      <i><img src="landing/images/thr.png" alt="#" /></i>
-                     <h3>Paket kami (3)</h3>
-                     <p>Kami memberikan pelayanan yang terbaik kepada anda semoga terhibur dengan paket kami. </p>
+                     <h3>super besar</h3>
+                     <p>"Sungkem maha baginda lord sultan".harga mulai Rp 20.000/jam kamu mendapat komputer dengan extra power yang dapat membuat mu nyaman serasa di surga </p>
                   </div>
                </div>
             </div>
@@ -271,26 +224,7 @@
 
    <!-- end products -->
    <!-- laptop  section -->
-   <section id="diskon">
-      <div class="laptop">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="titlepage" data-aos="zoom-out-right">
-                     <p>Dapatkan Diskon untuk pelanggan pertama</p>
-                     <h2>Up to 40% off !</h2>
-                     <a class="read_more" href="#">Boking Now!</a>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="laptop_box">
-                     <figure><img src="landing/images/pc.png" alt="#" /></figure>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+
    <!-- end laptop  section -->
    <!-- customer -->
    <div class="customer">
@@ -388,16 +322,16 @@
                   <form id="request" action="php/insert.php" method="post" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input autocomplete="off" class="contactus" placeholder="Name" type="type" name="nama">
+                           <input autocomplete="off" required class="contactus" placeholder="Name" type="type" name="nama">
                         </div>
                         <div class="col-md-12">
-                           <input autocomplete="off" class="contactus" placeholder="Email" type="type" name="email">
+                           <input autocomplete="off" required class="contactus" placeholder="Email" type="type" name="email">
                         </div>
                         <div class="col-md-12">
-                           <input autocomplete="off" class="contactus" placeholder="Phone Number" type="type" name="tlp">
+                           <input autocomplete="off" required class="contactus" placeholder="Phone Number" type="type" name="tlp">
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" name="pesan" Message="nama"></textarea>
+                           <textarea class="textarea" required placeholder="Message" type="type" name="pesan" Message="nama"></textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn" name="submit" type="submit">Send</button>
