@@ -1,29 +1,57 @@
 <?php
 session_start();
 if (!isset($_SESSION["login"])) {
-    header("Location: ../");
-    exit;
+	header("Location: ../");
+	exit;
 }
-require '../php/backend.php';
+require '../php/koneksi.php';
+$email = $_SESSION['email'];
+
+$query = mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE email='$email'");
+$data = mysqli_fetch_assoc($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user</title>
+	<meta charset="UTF-8">
+	<title>user dashboard</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
-dashboard user
-<a href="../php/logout.php">
-    <button>
-        logout
-    </button>
-</a>
 
 <body>
+	<section class="main-content">
+		<div class="container">
+			<h1 class="text-center">Hai Welcome Back!</h1>
+			<br>
+			<br>
 
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+					<div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden">
+						<div class="banner"></div>
+						<img src="img/user1.jpg" alt="" class="img-circle mx-auto mb-3">
+						<h3 class="mb-4"><?= $data['nama']; ?></h3>
+						<div class="text-left mb-4">
+							<p class="mb-2"><i class="fa fa-envelope mr-2"></i> <?= $data['email']; ?></p>
+							<p class="mb-2"><i class="fa fa-phone mr-2"></i><?= $data['tlp']; ?></p>
+							<div style="margin-bottom:-30px; margin-top:50px;">
+								<p class="mb-2"><a style="color: black;" href="../php/logout.php"><i class="bi bi-box-arrow-in-right"></i> Logout</a> <a style="color: black; margin-left:100px;" href="update.php"><i class="bi bi-pencil-square"></i> Edit</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

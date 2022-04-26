@@ -4,6 +4,7 @@ if (isset($_POST["register"])) {
     if (registrasi($_POST) > 0) {
         echo "<script>
         alert('berhasil')
+        document.location.href='login.php';
         </script>
         ";
     } else {
