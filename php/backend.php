@@ -11,7 +11,64 @@ function query($query)
     }
     return $rows;
 }
+function upload()
+{
+    $namafile = $_FILES['gambar']['name'];
+    $ukuranfile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES['gambar']['tmp_name'];
+    if ($error === 4) {
+        echo "
+        <script>
+        alert('insert image')
+        </script>
+        ";
+        return false;
+    }
+    $filegambar = ['jpg', 'jpeg', 'png', 'jfif', 'raw', 'webp'];
+    $ekstensigambar = explode('.', $namafile);
+    $ekstensigambar = strtolower(end($ekstensigambar));
+    if (!in_array($ekstensigambar, $filegambar)) {
+        echo "
+        <script>
+        alert('file not supported')
+        </script>
+        ";
+        return false;
+    }
+    if ($ukuranfile > 11000000) {
+        echo "
+        <script>
+        alert('file size not supported ')
+        </script>
+        ";
+        return false;
+    }
+    $namafilebaru = uniqid();
+    $namafilebaru .= '.';
+    $namafilebaru .= $ekstensigambar;
+    move_uploaded_file($tmpName, '../assets/img/' . $namafilebaru);
+    return $namafilebaru;
+}
+// update
+function ubah($data)
+{
+    global $konek;
+    $id = $data["id"];
+    $nama = $data["nama"];
+    $email = $data["email"];
+    $tlp = $data["tlp"];
+    $gambarlama = ($data["gambarlama"]);
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambarlama;
+    } else {
+        $gambar = upload();
+    }
+    $query = "UPDATE pelanggan SET nama='$nama', email='$email',tlp='$tlp', gambar='$gambar' WHERE id=$id ";
 
+    mysqli_query($konek, $query);
+    return mysqli_affected_rows($konek);
+}
 // fuction login/register user
 function registrasi($data)
 {
@@ -41,7 +98,7 @@ function registrasi($data)
     }
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_query($konek, "INSERT INTO pelanggan VALUES('user','','$nama','$password','$email','$tlp')");
+    mysqli_query($konek, "INSERT INTO pelanggan VALUES('user','','$nama','$password','$email','$tlp','user1.jpg')");
 
     return mysqli_affected_rows($konek);
 }

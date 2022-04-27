@@ -34,13 +34,13 @@ $data = mysqli_fetch_assoc($query);
 				<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
 					<div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden">
 						<div class="banner"></div>
-						<img src="img/user1.jpg" alt="" class="img-circle mx-auto mb-3">
+						<img src="../assets/img/<?= $data['gambar']; ?>" alt="" class="img-circle mx-auto mb-3">
 						<h3 class="mb-4"><?= $data['nama']; ?></h3>
 						<div class="text-left mb-4">
 							<p class="mb-2"><i class="fa fa-envelope mr-2"></i> <?= $data['email']; ?></p>
 							<p class="mb-2"><i class="fa fa-phone mr-2"></i><?= $data['tlp']; ?></p>
 							<div style="margin-bottom:-30px; margin-top:50px;">
-								<p class="mb-2"><a style="color: black;" href="../php/logout.php"><i class="bi bi-box-arrow-in-right"></i> Logout</a> <a style="color: black; margin-left:100px;" href="update.php"><i class="bi bi-pencil-square"></i> Edit</a></p>
+								<small class="mb-2"><a style="color: black;" href="../php/logout.php"><i class="bi bi-box-arrow-in-right"></i> Logout</a> <a style="margin-left: 50px; color: black;" href="../"><i class="bi bi-house-door"></i></a><a style="color: black; margin-left:50px;" href="update.php?id=<?= $data["id"]; ?>"><i class="bi bi-pencil-square"></i> Edit</a></small>
 							</div>
 						</div>
 					</div>

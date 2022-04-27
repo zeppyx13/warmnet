@@ -57,9 +57,9 @@
 <body class="main-layout">
    <!-- loader  -->
 
-   <!-- <div class="loader_bg">
+   <div class="loader_bg">
       <div class="loader"><img src="landing/images/loding2.gif" alt="#" /></div>
-   </div> -->
+   </div>
 
    <!-- end loader -->
    <!-- header -->
@@ -124,7 +124,7 @@
                               <span>Menyewakan computer</span>
                               <h1>Accessories</h1>
                               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="reservation.php">Boking </a>
+                              <a href="user/reservation/">Boking </a>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -145,7 +145,7 @@
                               <span>Menyewakan computer</span>
                               <h1>Accessories</h1>
                               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="reservation.php">Boking </a>
+                              <a href="user/reservation/">Boking </a>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -166,7 +166,7 @@
                               <span>Menyewakan computer</span>
                               <h1>Accessories</h1>
                               <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="reservation.php">Boking </a>
+                              <a href="user/reservation/">Boking </a>
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -361,13 +361,13 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <h3>Tentang kami</h3>
                   <ul class="about_us">
-                     <li>dolor sit amet, consectetur<br> magna aliqua. Ut enim ad <br>minim veniam, <br> quisdotempor incididunt r</li>
+                     <li>Warm Net<br> adalah sebuah usaha penyewaan komputer <br>untuk kepentingan apapun seperti. <br>Game,nugas,browsing,atau kepentingan lainya.</li>
                   </ul>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <h3>Contact kami</h3>
                   <ul class="conta">
-                     <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
+                     <li>jika ingin bertanya<br> Hubungi ke <br>Email contact@warmnet.com<br> atau bisa ke WhatsApp <br>+6281-877-980-779</li>
                   </ul>
                </div>
             </div>
