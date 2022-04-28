@@ -51,15 +51,26 @@
    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "0a36c984-6b60-4dd4-a655-e2eae3befe89";
+      (function() {
+         d = document;
+         s = d.createElement("script");
+         s.src = "https://client.crisp.chat/l.js";
+         s.async = 1;
+         d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+   </script>
 </head>
 <!-- body -->
 
 <body class="main-layout">
    <!-- loader  -->
 
-   <div class="loader_bg">
+   <!-- <div class="loader_bg">
       <div class="loader"><img src="landing/images/loding2.gif" alt="#" /></div>
-   </div>
+   </div> -->
 
    <!-- end loader -->
    <!-- header -->
@@ -121,15 +132,22 @@
                      <div class="row">
                         <div class="col-md-6">
                            <div class="text-bg">
-                              <span>Menyewakan computer</span>
-                              <h1>Accessories</h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="user/reservation/">Boking </a>
+                              <span>Paket Pc </span>
+                              <h1>SuperBesar</h1>
+                              <p>Spesifikasi : <br>
+                                 PROCESOR : i9-12900K <br>
+                                 RAM : 32GB 3200Hz <br>
+                                 VGA : RTX 3090 <br>
+                                 Monitor : 320hz <br>
+                                 <br>
+                                 <Strong>Start From : 20k/jam</strong>
+                              </p>
+                              <a href="reservation/">Boking Now </a>
                            </div>
                         </div>
                         <div class="col-md-6">
                            <div class="text_img">
-                              <figure><img src="landing/images/pct.png" alt="#" /></figure>
+                              <figure><img style="margin-left:100px;max-width: 350px; max-height: 390px;" src="landing/images/pc1.png" alt="#" /></figure>
                            </div>
                         </div>
                      </div>
@@ -142,15 +160,23 @@
                      <div class="row">
                         <div class="col-md-6">
                            <div class="text-bg">
-                              <span>Menyewakan computer</span>
-                              <h1>Accessories</h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="user/reservation/">Boking </a>
+                              <span>Paket Pc </span>
+                              <h1>Panas</h1>
+                              <p>Spesifikasi : <br>
+                                 PROCESOR : i7-12900K <br>
+                                 RAM : 16GB 3200Hz <br>
+                                 VGA : RTX 3070 <br>
+                                 Monitor : 240hz
+                                 <br>
+                                 <br>
+                                 <Strong>Start From : 10k/jam</strong>
+                              </p>
+                              <a href="reservation/">Boking Now </a>
                            </div>
                         </div>
                         <div class="col-md-6">
                            <div class="text_img">
-                              <figure><img src="landing/images/pct.png" alt="#" /></figure>
+                              <figure><img style="margin-left:100px;max-width: 550px; max-height: 500px;" src="landing/images/pc2.png" alt="#" /></figure>
                            </div>
                         </div>
                      </div>
@@ -163,15 +189,22 @@
                      <div class="row">
                         <div class="col-md-6">
                            <div class="text-bg">
-                              <span>Menyewakan computer</span>
-                              <h1>Accessories</h1>
-                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or </p>
-                              <a href="user/reservation/">Boking </a>
+                              <span>Paket Pc</span>
+                              <h1>Hemat</h1>
+                              <p>Spesifikasi : <br>
+                                 PROCESOR : i5-10500H <br>
+                                 RAM : 16GB 3200Hz <br>
+                                 VGA : RTX 3060 <br>
+                                 Monitor : 120hz<br>
+                                 <br>
+                                 <Strong>Start From : 5k/jam</strong>
+                              </p>
+                              <a href="reservation/">Boking Now </a>
                            </div>
                         </div>
                         <div class="col-md-6">
                            <div class="text_img">
-                              <figure><img src="landing/images/pct.png" alt="#" /></figure>
+                              <figure><img style="margin-left:150px;max-width: 380px; max-height: 400px;" src="landing/images/pc3.png" alt="#" /></figure>
                            </div>
                         </div>
                      </div>
@@ -307,7 +340,7 @@
    <!-- end customer -->
 
    <!--  contact -->
-   <section id="contact">
+   <!-- <section id="contact">
       <div class="contact">
          <div class="container">
             <div class="row">
@@ -342,7 +375,7 @@
             </div>
          </div>
       </div>
-   </section>
+   </section> -->
    <!-- end contact -->
    <!--  footer -->
    <footer>
