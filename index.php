@@ -2,27 +2,19 @@
 <html lang="en">
 
 <head>
-   <!-- basic -->
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- mobile metas -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas -->
    <title>Home</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
-   <!-- bootstrap css -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
    <link rel="stylesheet" href="landing/css/bootstrap.min.css">
-   <!-- style css -->
    <link rel="stylesheet" href="landing/css/style.css">
-   <!-- link aos -->
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <!-- Responsive-->
    <link rel="stylesheet" href="landing/css/responsive.css">
-   <!-- fevicon -->
    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/ico/apple-touch-icon-57x57.png" />
    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png" />
    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png" />
@@ -43,9 +35,7 @@
    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-   <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="landing/css/jquery.mCustomScrollbar.min.css">
-   <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    <!--[if lt IE 9]>
@@ -63,7 +53,6 @@
       })();
    </script>
 </head>
-<!-- body -->
 
 <body class="main-layout">
    <!-- loader  -->
@@ -73,9 +62,7 @@
    </div> -->
 
    <!-- end loader -->
-   <!-- header -->
    <header>
-      <!-- header inner dan navabr-->
       <div class="header">
          <div class="container-fluid">
             <div class="row">
@@ -115,18 +102,36 @@
          </div>
       </div>
    </header>
-   <!-- end header inner -->
-   <!-- end header -->
-   <!-- banner -->
    <section class="banner_main">
       <div id="banner1" class="carousel slide" data-ride="carousel">
          <ol class="carousel-indicators">
             <li data-target="#banner1" data-slide-to="0" class="active"></li>
             <li data-target="#banner1" data-slide-to="1"></li>
             <li data-target="#banner1" data-slide-to="2"></li>
+            <li data-target="#banner1" data-slide-to="3"></li>
          </ol>
          <div class="carousel-inner">
             <div class="carousel-item active">
+               <div class="container">
+                  <div class="carousel-caption">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="text-bg">
+                              <h1 class="awal">Warm-Net</h1>
+                              <p> <strong> Warm-Net</strong>,adalah sebuah usaha penyewaan komputer kepada pelanggan dengan tarif dan waktu tertentu,atau biasa disebut Warnet atau Warung internet. Disini pelanggan dapat menggunakan komputer dengan keperluan apapun, contoh beramin game, browsing,dan nugas.kami tau para pelanggan kami mungkin tidak memiliki komputer ataupun komputer meraka tidak kuat dalam melakukan produktifitas,dikarenakan itu kami menyediakan komputer yang kuat. </p>
+                              <a href="reservation/">Boking Now </a>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="text_img">
+                              <figure><img src="landing/images/pc13.png" alt="#" /></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item ">
                <div class="container">
                   <div class="carousel-caption">
                      <div class="row">
@@ -140,14 +145,14 @@
                                  VGA : RTX 3090 <br>
                                  Monitor : 320hz <br>
                                  <br>
-                                 <Strong>Start From : 20k/jam</strong>
+                                 <Strong>Start From : 25k/jam</strong>
                               </p>
                               <a href="reservation/">Boking Now </a>
                            </div>
                         </div>
                         <div class="col-md-6">
                            <div class="text_img">
-                              <figure><img style="margin-left:100px;max-width: 350px; max-height: 390px;" src="landing/images/pc1.png" alt="#" /></figure>
+                              <figure><img style="max-width: 400px;max-height: 450px;" src="landing/images/pc1.png" alt="#" /></figure>
                            </div>
                         </div>
                      </div>
@@ -169,14 +174,14 @@
                                  Monitor : 240hz
                                  <br>
                                  <br>
-                                 <Strong>Start From : 10k/jam</strong>
+                                 <Strong>Start From : 15k/jam</strong>
                               </p>
                               <a href="reservation/">Boking Now </a>
                            </div>
                         </div>
                         <div class="col-md-6">
-                           <div class="text_img">
-                              <figure><img style="margin-left:100px;max-width: 550px; max-height: 500px;" src="landing/images/pc2.png" alt="#" /></figure>
+                           <div class="text_img pc2">
+                              <figure><img style="max-width: 550px; max-height: 500px;" src="landing/images/pc2.png" alt="#" /></figure>
                            </div>
                         </div>
                      </div>
@@ -197,14 +202,14 @@
                                  VGA : RTX 3060 <br>
                                  Monitor : 120hz<br>
                                  <br>
-                                 <Strong>Start From : 5k/jam</strong>
+                                 <Strong>Start From : 10k/jam</strong>
                               </p>
                               <a href="reservation/">Boking Now </a>
                            </div>
                         </div>
                         <div class="col-md-6">
                            <div class="text_img">
-                              <figure><img style="margin-left:150px;max-width: 380px; max-height: 400px;" src="landing/images/pc3.png" alt="#" /></figure>
+                              <figure><img src="landing/images/pc3.png" alt="#" /></figure>
                            </div>
                         </div>
                      </div>
@@ -220,9 +225,6 @@
          </a>
       </div>
    </section>
-   <!-- end banner -->
-
-   <!-- awal paket -->
    <div id="paket">
       <div class="three_box">
          <div class="container">
@@ -252,14 +254,6 @@
          </div>
       </div>
    </div>
-   <!-- end paket -->
-   <!-- products -->
-
-   <!-- end products -->
-   <!-- laptop  section -->
-
-   <!-- end laptop  section -->
-   <!-- customer -->
    <div class="customer">
       <div class="container">
          <div class="row">
@@ -337,47 +331,6 @@
          </div>
       </div>
    </div>
-   <!-- end customer -->
-
-   <!--  contact -->
-   <!-- <section id="contact">
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage" data-aos="zoom-in-down">
-                     <h2>Contact Now</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <form id="request" action="php/insert.php" method="post" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input autocomplete="off" required class="contactus" placeholder="Name" type="type" name="nama">
-                        </div>
-                        <div class="col-md-12">
-                           <input autocomplete="off" required class="contactus" placeholder="Email" type="type" name="email">
-                        </div>
-                        <div class="col-md-12">
-                           <input autocomplete="off" required class="contactus" placeholder="Phone Number" type="type" name="tlp">
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" required placeholder="Message" type="type" name="pesan" Message="nama"></textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn" name="submit" type="submit">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section> -->
-   <!-- end contact -->
-   <!--  footer -->
    <footer>
       <div class="footer">
          <div class="container">
@@ -409,25 +362,33 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <p>© 2022 All Rights Reserved. Design by warm-net team</p>
+                     <p>© 2022 All Rights Reserved. Design by Warm-net team
+                     </p>
                   </div>
                </div>
             </div>
          </div>
       </div>
    </footer>
-   <!-- end footer -->
-   <!-- js aos -->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script>
       AOS.init();
    </script>
-   <!-- Javascript files-->
    <script src="landing/js/jquery.min.js"></script>
    <script src="landing/js/popper.min.js"></script>
    <script src="landing/js/bootstrap.bundle.min.js"></script>
    <script src="landing/js/jquery-3.0.0.min.js"></script>
-   <!-- sidebar -->
+   <script>
+      var toastTrigger = document.getElementById('liveToastBtn')
+      var toastLiveExample = document.getElementById('liveToast')
+      if (toastTrigger) {
+         toastTrigger.addEventListener('click', function() {
+            var toast = new bootstrap.Toast(toastLiveExample)
+
+            toast.show()
+         })
+      }
+   </script>
    <script src="landing/js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="landing/js/custom.js"></script>
 </body>
