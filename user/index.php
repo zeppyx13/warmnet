@@ -8,6 +8,8 @@ require '../php/koneksi.php';
 $email = $_SESSION['email'];
 
 $query = mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE email='$email'");
+$jam = mysqli_query($koneksi, "SELECT * FROM booking WHERE email='$email' ");
+$dta = mysqli_fetch_assoc($jam);
 $data = mysqli_fetch_assoc($query);
 ?>
 <!DOCTYPE html>
@@ -59,7 +61,8 @@ $data = mysqli_fetch_assoc($query);
 						<div class="text-left mb-4">
 							<p class="mb-2"><i class="fa fa-envelope mr-2"></i> <?= $data['email']; ?></p>
 							<p class="mb-2"><i class="fa fa-phone mr-2"></i><?= $data['tlp']; ?></p>
-							<p class="mb-2"><i class="bi bi-clock-history"></i> <?= $data['tlp']; ?></p>
+							<p class="mb-2"><i class="bi bi-clock-history"></i> <?= $dta['waktu']; ?>
+							<p>
 							<div style="margin-bottom:-30px; margin-top:50px;">
 								<small class="mb-2"><a style="color: black;" href="../php/logout.php"><i class="bi bi-box-arrow-in-right"></i> Logout</a> <a style="margin-left: 50px; color: black;" href="../"><i class="bi bi-house-door"></i></a><a style="color: black; margin-left:50px;" href="update.php?id=<?= $data["id"]; ?>"><i class="bi bi-pencil-square"></i> Edit</a></small>
 							</div>

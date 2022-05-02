@@ -4,6 +4,14 @@ include "koneksi.php";
 
 if (isset($_POST["submit"])) {
     $paket = $_POST['paket'];
+    if ($paket == "bkn") {
+        echo "<script>
+        alert('pesanan gagal anda belum memilih paket')
+        document.location.href='../reservation/';
+        </script>
+        ";
+        exit;
+    }
     $nama = $_POST['nama'];
     $email = $_SESSION['email'];
     $tlp = $_POST['tlp'];
