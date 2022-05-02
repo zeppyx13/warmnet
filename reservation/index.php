@@ -1,109 +1,95 @@
 <?php
-include "../php/backend.php";
+include '../php/koneksi.php';
 session_start();
 if (!isset($_SESSION["login"])) {
-    header("Location:../login.php");
-    exit;
+  header("Location: ../login.php");
+  exit;
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/ico/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/ico/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/ico/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/ico/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/ico/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-    <title>Booking</title>
+  <meta charset="utf-8" />
+  <meta htpp-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <title>Booking</title>
 </head>
 
 <body>
-    <section class="form">
-        <div class="form valign">
-            <h2>FORM BOOKING</h2>
-            <form class="row g-3" action="proses-booking.php" method="POST" enctype="multipart/form-data">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <label for="inputEmail" class="form-label">Unit PC</label>
-                    <input type="text" class="form-control" id="inputEmail" name="Unit_PC">
-                </div>
-
-
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-
-
-                <div class="col-md-8">
-                    <label for="namapelanggan" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="namapelanggan" name="NP_Pelanggan">
-                </div>
-
-
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-
-
-                <div class="col-4">
-                    <label for="tglbln" class="form-label">No Telp</label>
-                    <input type="text" class="form-control" id="jampenggunaan" placeholder="08xxxxxxx" name="No_Telp">
-                </div>
-                <div class="col-4">
-                    <label for="tglbln" class="form-label">Tgl Bulan</label>
-                    <input type="text" class="form-control" id="tglbln" placeholder="1 Januari" name="Tgl_Bln">
-                </div>
-
-
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-
-
-                <div class="col-4">
-                    <label for="waktupenggunaan" class="form-label">Jam</label>
-                    <input type="text" class="form-control" id="waktupenggunaan" placeholder="15.00" name="Jam">
-                </div>
-                <div class="col-4">
-                    <label for="waktupenggunaan" class="form-label">Waktu Penggunaan</label>
-                    <input type="text" class="form-control" id="waktupenggunaan" placeholder="1 Jam" name="Waktu_Penggunaan">
-                </div>
-
-
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-
-
-                <div class="col-md-4">
-                    <img src="img/1.png" alt="Gambar" width="215px" height="215px" />
-                </div>
-                <div class="col-md-4">
-                    <img src="img/2.png" alt="Gambar" width="215px" height="215px" />
-                </div>
-                <div class="col-md-8"></div>
-                <div class="col-3">
-                    <button type="submit" name="submit" class="btn btn-outline-success">Submit</button>
-                </div>
-            </form>
+  <section class="form">
+    <div class="form valign">
+      <h2>FORM BOOKING</h2>
+      <form class="row g-3" action="../php/booking.php" method="POST" enctype="multipart/form-data">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <label for="inputEmail" class="form-label">Paket</label>
+          <select class="form-select" aria-label="Default select example" id="inputEmail" name="paket">
+            <option selected>Pilih Paket</option>
+            <option value="Hemat">Hemat (1-8)</option>
+            <option value="Panas">Panas (9-15)</option>
+            <option value="SuperBesar">SuperBesar 16-20</option>
+          </select>
         </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <label for="namapelanggan" class="form-label">nama</label>
+          <input type="text" class="form-control" id="namapelanggan" name="nama">
         </div>
-    </section>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-4">
+          <label for="tglbln" class="form-label">No Telp</label>
+          <input type="int" class="form-control" id="jampenggunaan" placeholder="08xxxxxxx" name="tlp">
+        </div>
+        <div class="col-4">
+          <label for="tglbln" class="form-label">Tgl Bulan</label>
+          <input type="date" class="form-control" id="tglbln" placeholder="1 Januari" name="date">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-4">
+          <label for="waktupenggunaan" class="form-label">Jam</label>
+          <input type="time" class="form-control" id="waktupenggunaan" placeholder="15.00" name="jam">
+        </div>
+        <div class="col-4">
+          <label for="waktupenggunaan" class="form-label">Waktu Penggunaan</label>
+          <input type="text" class="form-control" id="waktupenggunaan" placeholder="1 Jam" name="waktu">
+        </div>
+        <div class="col-md-4">
+          <img class="g1" src="img/1.png" alt="Gambar" width="215px" height="215px" />
+        </div>
+        <div class="col-md-4">
+          <img class="g2" src="img/2.1.png" alt="Gambar" width="215px" height="215px" />
+        </div>
+        <div class="col-md-4">
+          <img class="g3" src="img/3.png" alt="Gambar" width="215px" height="215px" />
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-3 about_us">
+          <button type="submit" name="submit" class="btn btn-outline-success">Submit</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </section>
+
+
+
+
 </body>
 
 </html>

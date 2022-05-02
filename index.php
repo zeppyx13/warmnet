@@ -52,6 +52,12 @@
          d.getElementsByTagName("head")[0].appendChild(s);
       })();
    </script>
+
+   <script type="text/javascript">
+      function ubah() {
+         document.getElementById("login").innerText("Home");
+      }
+   </script>
 </head>
 
 <body class="main-layout">
@@ -92,7 +98,7 @@
                               <a class="nav-link" href="#contact">Contact Us</a>
                            </li>
                            <li class="nav-item d_none">
-                              <a class="nav-link" href="login.php"><button type="button" style="border-radius: 15px; margin-bottom: 150px; margin-top: -10px;" class="btn btn-success"><i class="bi bi-box-arrow-in-right"></i> Login</button></a>
+                              <a class="nav-link" id="login" href="login.php"><button type="button" style="border-radius: 15px; margin-bottom: 150px; margin-top: -10px;" class="btn btn-success"><i class="bi bi-box-arrow-in-right"></i> Login</button></a>
                            </li>
                         </ul>
                      </div>
@@ -233,21 +239,21 @@
                   <div class="box_text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                      <i><img src="landing/images/thr.png" alt="#" /></i>
                      <h3>Paket hemat </h3>
-                     <p>Paket Hemat,mulai dari Rp 5.000/jam kamu sudah bisa menghindari pc kentang mu yang ada di rumah yahahah </p>
+                     <p>Paket Hemat,mulai dari Rp 10.000/jam kamu sudah bisa menghindari pc kentang mu yang ada di rumah yahahah </p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text" data-aos-offset="300" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                      <i><img src="landing/images/thr.png" alt="#" /></i>
                      <h3>Paket Panas</h3>
-                     <p>Pilih nasi goreng apa ke warnet?. hanya mulai dari Rp 10.000/jam kamu mendapat pelayanan VIP serasa orang penting dan lebih berkasta dari yang mesen paket hemat </p>
+                     <p>Pilih nasi goreng apa ke warnet?. hanya mulai dari Rp 15.000/jam kamu mendapat pelayanan VIP serasa orang penting dan lebih berkasta dari yang mesen paket hemat </p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                      <i><img src="landing/images/thr.png" alt="#" /></i>
                      <h3>super besar</h3>
-                     <p>"Sungkem maha baginda lord sultan".harga mulai Rp 20.000/jam kamu mendapat komputer dengan extra power yang dapat membuat mu nyaman serasa di surga </p>
+                     <p>"Sungkem maha baginda lord sultan".harga mulai Rp 25.000/jam kamu mendapat komputer dengan extra power yang dapat membuat mu nyaman serasa di surga </p>
                   </div>
                </div>
             </div>

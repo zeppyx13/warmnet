@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION["admin"])) {
+  header("Location:oprator/");
+  exit;
+} else if (isset($_SESSION["login"])) {
+  header("Location:user/");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

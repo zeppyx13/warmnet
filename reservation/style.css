@@ -1,0 +1,21 @@
+h2 {
+  text-align: center;
+}
+img {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+@media (min-width: 992px) {
+  .g1 {
+    margin-left: 400px;
+  }
+  .g2 {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 575px) {
+  .btn {
+    margin-left: 130px;
+  }
+}
