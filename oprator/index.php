@@ -249,8 +249,10 @@ $pc = query("SELECT * FROM komputer");
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Id booking</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Jam</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Username</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sisa waktu</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">email</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> waktu</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Action</th>
                                         </tr>
                                     </thead>
 
@@ -263,28 +265,38 @@ $pc = query("SELECT * FROM komputer");
                                                     <div class="d-flex px-2 py-1">
 
                                                         <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">ID #<?= $row["Unit_PC"]; ?> </h6>
+                                                            <h6 class="mb-0 text-sm">ID #<?= $row["id"]; ?> </h6>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="avatar-group mt-2">
-                                                        <p><?= $row["Tgl_Bln"]; ?></p>
+                                                        <p><?= $row["date"]; ?></p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="avatar-group mt-2">
-                                                        <p><?= $row["Jam"]; ?></p>
+                                                        <p><?= $row["jam"]; ?></p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="avatar-group mt-2">
+                                                        <p><?= $row["nama"]; ?></p>
                                                     </div>
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
-                                                    <span class="text-xs font-weight-bold"><?= $row["NM_Pelanggan"]; ?> </span>
+                                                    <span class="text-xs font-weight-bold"><?= $row["email"]; ?> </span>
                                                 </td>
                                                 <td class="align-middle">
                                                     <div class="progress-wrapper w-75 mx-auto">
-                                                        <p><?= $row["Waktu_Penggunaan"]; ?></p>
+                                                        <p><?= $row["waktu"]; ?></p>
                                                     </div>
                             </div>
+                            </td>
+                            <td>
+                                <div style="margin-left: 50px;">
+                                    <button>Accept</button> || <button>Reject</button>
+                                </div>
                             </td>
                             </tr>
                             <?php $i++; ?>
