@@ -206,7 +206,7 @@
                                  PROCESOR : i5-10500H <br>
                                  RAM : 16GB 3200Hz <br>
                                  VGA : RTX 3060 <br>
-                                 Monitor : 120hz<br>
+                                 Monitor : 144hz<br>
                                  <br>
                                  <Strong>Start From : 10k/jam</strong>
                               </p>

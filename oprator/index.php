@@ -250,6 +250,7 @@ $pc = query("SELECT * FROM komputer");
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Jam</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Paket</th>
                                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">email</th>
                                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> waktu</th>
                                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Action</th>
@@ -284,6 +285,11 @@ $pc = query("SELECT * FROM komputer");
                                                         <p><?= $row["nama"]; ?></p>
                                                     </div>
                                                 </td>
+                                                <td>
+                                                    <div class="avatar-group mt-2">
+                                                        <p><?= $row["paket"]; ?></p>
+                                                    </div>
+                                                </td>
                                                 <td class="align-middle text-center text-sm">
                                                     <span class="text-xs font-weight-bold"><?= $row["email"]; ?> </span>
                                                 </td>
@@ -295,7 +301,7 @@ $pc = query("SELECT * FROM komputer");
                             </td>
                             <td>
                                 <div style="margin-left: 50px;">
-                                    <button>Accept</button> || <button>Reject</button>
+                                    <a href="../php/acc.php?id=<?= $row['id']; ?>"> <button class="btn btn-success">Accept</button> </a>|| <a href="../php/hps.php?id=<?= $row['id']; ?>"><button class="btn btn-danger">Reject</button></a>
                                 </div>
                             </td>
                             </tr>
