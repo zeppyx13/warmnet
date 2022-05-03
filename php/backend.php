@@ -11,6 +11,58 @@ function query($query)
     }
     return $rows;
 }
+function tambah($data)
+{
+    global $konek;
+    $metode = $data["metode"];
+    $email = $data["email"];
+    $gambar = uploadfoto();
+    if (!$gambar) {
+        return false;
+    }
+    $query = "INSERT INTO billing VALUES('','$gambar','$metode','$email')";
+    mysqli_query($konek, $query);
+    return mysqli_affected_rows($konek);
+}
+function uploadfoto()
+{
+    $namafile = $_FILES['gambar']['name'];
+    $ukuranfile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES['gambar']['tmp_name'];
+    if ($error === 4) {
+        echo "
+        <script>
+        alert('insert image')
+        </script>
+        ";
+        return false;
+    }
+    $filegambar = ['jpg', 'jpeg', 'png', 'jfif', 'raw', 'webp'];
+    $ekstensigambar = explode('.', $namafile);
+    $ekstensigambar = strtolower(end($ekstensigambar));
+    if (!in_array($ekstensigambar, $filegambar)) {
+        echo "
+        <script>
+        alert('file not supported')
+        </script>
+        ";
+        return false;
+    }
+    if ($ukuranfile > 11000000) {
+        echo "
+        <script>
+        alert('file size not supported ')
+        </script>
+        ";
+        return false;
+    }
+    $namafilebaru = uniqid();
+    $namafilebaru .= '.';
+    $namafilebaru .= $ekstensigambar;
+    move_uploaded_file($tmpName, '../assets/bukti/' . $namafilebaru);
+    return $namafilebaru;
+}
 function upload()
 {
     $namafile = $_FILES['gambar']['name'];

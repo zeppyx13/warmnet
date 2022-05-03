@@ -93,10 +93,6 @@ if (!isset($_SESSION["login"])) {
     </div>
     </div>
   </section>
-
-
-
-
 </body>
 
 </html>
