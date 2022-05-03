@@ -39,15 +39,10 @@ $pc = query("SELECT * FROM komputer");
     <title>
         dashboard
     </title>
-
-    <!-- Nucleo Icons -->
     <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <!-- CSS Files -->
     <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.2" rel="stylesheet" />
 </head>
 
@@ -104,7 +99,6 @@ $pc = query("SELECT * FROM komputer");
         </div>
     </aside>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-        <!-- Navbar -->
         <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
             <div class="container-fluid py-1 px-3">
                 <nav aria-label="breadcrumb">
@@ -141,7 +135,6 @@ $pc = query("SELECT * FROM komputer");
                 </div>
             </div>
         </nav>
-        <!-- End Navbar -->
         <div class="container-fluid py-4">
             <div class="row">
                 <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -214,9 +207,6 @@ $pc = query("SELECT * FROM komputer");
                 </div>
             </div>
             <div class="row mt-4">
-
-
-
             </div>
             <div class="row mb-4">
                 <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
@@ -225,18 +215,12 @@ $pc = query("SELECT * FROM komputer");
                             <div class="row">
                                 <div class="col-lg-6 col-7">
                                     <h4>Orders overview </h4>
-
                                 </div>
                                 <div class="col-lg-6 col-5 my-auto text-end">
                                     <div class="dropdown float-lg-end pe-4">
                                         <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa fa-ellipsis-v text-secondary"></i>
+
                                         </a>
-                                        <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +242,6 @@ $pc = query("SELECT * FROM komputer");
                                     </thead>
 
                                     <tbody>
-                                        <!-- loop daftar pc -->
                                         <?php $i = 1; ?>
                                         <?php foreach ($data as $row) : ?>
                                             <tr>
@@ -301,13 +284,12 @@ $pc = query("SELECT * FROM komputer");
                             </td>
                             <td>
                                 <div style="margin-left: 50px;">
-                                    <a href="../php/acc.php?id=<?= $row['id']; ?>"> <button class="btn btn-success">Accept</button> </a>|| <a href="../php/hps.php?id=<?= $row['id']; ?>"><button class="btn btn-danger">Reject</button></a>
+                                    <a href="../php/hps.php?id=<?= $row['id']; ?>"><button class="btn btn-danger">Reject</button></a>
                                 </div>
                             </td>
                             </tr>
                             <?php $i++; ?>
                         <?php endforeach; ?>
-                        <!--akhir  loop daftar pc -->
                         </tbody>
                         </table>
                         </div>

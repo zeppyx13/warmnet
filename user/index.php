@@ -67,6 +67,9 @@ $data = mysqli_fetch_assoc($query);
 																					echo $dta[7];
 																				} else {
 																					echo "anda belum memiliki paket";
+																					echo "<br>";
+																					echo "<br>";
+																					echo '<a href="../reservation/">Pilih Paket</a>';
 																				}
 																				?>
 							<p>

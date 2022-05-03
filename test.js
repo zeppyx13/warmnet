@@ -1,1 +1,3 @@
-document.getElementById("login").innerHTML = "Home";
+function ubah() {
+  document.getElementById("login").innerHTML = "Home";
+}
