@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location:../");
+    exit;
+}
 include "koneksi.php";
 require "backend.php";
 if (isset($_POST["submit"])) {
@@ -28,11 +32,21 @@ if (isset($_POST["submit"])) {
     <title>Payment</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/ico/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/ico/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/ico/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/ico/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/ico/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../assets/ico/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../assets/ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../assets/ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../assets/ico/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../assets/ico/favicon-128.png" sizes="128x128" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -135,7 +149,7 @@ if (isset($_POST["submit"])) {
                                             <span class="fa fa-map-marker"></span>
                                         </div>
                                         <div class="text pl-3">
-                                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                            <p><span>Address:</span> jalan maskumambang, no 33 Denpasar,Bali</p>
                                         </div>
                                     </div>
                                     <div class="dbox w-100 d-flex align-items-center">
@@ -143,7 +157,7 @@ if (isset($_POST["submit"])) {
                                             <span class="fa fa-phone"></span>
                                         </div>
                                         <div class="text pl-3">
-                                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                            <p><span>Phone:</span> <a href="tel://1234567920">+6281-877-980-779</a></p>
                                         </div>
                                     </div>
                                     <div class="dbox w-100 d-flex align-items-center">
@@ -175,7 +189,7 @@ if (isset($_POST["submit"])) {
         if (tambah($_POST) > 0) {
             echo "<script>
         alert('pesanan berhasil')
-        document.location.href='../reservation/';
+        document.location.href='../user/';
         </script>
         ";
         } else {

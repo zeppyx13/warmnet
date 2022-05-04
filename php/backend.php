@@ -24,6 +24,59 @@ function tambah($data)
     mysqli_query($konek, $query);
     return mysqli_affected_rows($konek);
 }
+function add($data)
+{
+    global $konek;
+    $hari = $data["hari"];
+    $bukti = gbr();
+    if (!$bukti) {
+        return false;
+    }
+    $query = "INSERT INTO pendapatan VALUES('','$hari','$bukti')";
+    mysqli_query($konek, $query);
+    return mysqli_affected_rows($konek);
+}
+// 
+function gbr()
+{
+    $namafile = $_FILES['bukti']['name'];
+    $ukuranfile = $_FILES['bukti']['size'];
+    $error = $_FILES['bukti']['error'];
+    $tmpName = $_FILES['bukti']['tmp_name'];
+    if ($error === 4) {
+        echo "
+        <script>
+        alert('insert image')
+        </script>
+        ";
+        return false;
+    }
+    $filegambar = ['jpg', 'jpeg', 'png', 'jfif', 'raw', 'webp'];
+    $ekstensigambar = explode('.', $namafile);
+    $ekstensigambar = strtolower(end($ekstensigambar));
+    if (!in_array($ekstensigambar, $filegambar)) {
+        echo "
+        <script>
+        alert('file not supported')
+        </script>
+        ";
+        return false;
+    }
+    if ($ukuranfile > 11000000) {
+        echo "
+        <script>
+        alert('file size not supported ')
+        </script>
+        ";
+        return false;
+    }
+    $namafilebaru = uniqid();
+    $namafilebaru .= '.';
+    $namafilebaru .= $ekstensigambar;
+    move_uploaded_file($tmpName, '../assets/bukti/report/' . $namafilebaru);
+    return $namafilebaru;
+}
+// 
 function uploadfoto()
 {
     $namafile = $_FILES['gambar']['name'];
