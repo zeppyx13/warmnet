@@ -330,7 +330,7 @@
          </div>
       </div>
    </div>
-   <footer>
+   <footer id="contact">
       <div class="footer">
          <div class="container">
             <div class="row">
