@@ -69,7 +69,7 @@
                   <div class="full">
                      <div class="center-desk">
                         <div class="logo">
-                           <a href="index.html"><img src="landing/images/Picsart_22-04-21_10-37-33-304.png" alt="#" /></a>
+                           <a href=""><img src="landing/images/Picsart_22-04-21_10-37-33-304.png" alt="#" /></a>
                         </div>
                      </div>
                   </div>
@@ -90,8 +90,8 @@
                            <li class="nav-item">
                               <a class="nav-link" href="#contact">Contact Us</a>
                            </li>
-                           <li class="nav-item d_none">
-                              <a class="nav-link" id="login" href="login.php"><button type="button" style="border-radius: 15px; margin-bottom: 150px; margin-top: -10px;" class="btn btn-success"><i class="bi bi-box-arrow-in-right"></i> Login</button></a>
+                           <li class="nav-item ">
+                              <a class="nav-link" id="login" href="login.php"><button type="button" style="border-radius: 15px; margin-bottom: 150px; margin-top: -10px;" class="btn btn-linkedin"><i class="bi bi-box-arrow-in-right"></i> Login</button></a>
                            </li>
                         </ul>
                      </div>

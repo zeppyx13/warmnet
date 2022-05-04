@@ -97,7 +97,6 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
     </div>
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
@@ -134,7 +133,6 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-12">
@@ -174,11 +172,6 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
                         </td>
                         <td class="align-middle text-center text-sm">
                           <span class=""><?= $row['tlp']; ?></span>
-                        </td>
-                        <td class="align-middle">
-                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                            Edit
-                          </a>
                         </td>
                       </tr>
                       <?php $i++; ?>
@@ -228,11 +221,9 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
             <i class="material-icons">clear</i>
           </button>
         </div>
-        <!-- End Toggle Button -->
       </div>
       <hr class="horizontal dark my-1">
       <div class="card-body pt-sm-3 pt-0">
-        <!-- Sidebar Backgrounds -->
         <div>
           <h6 class="mb-0">Sidebar Colors</h6>
         </div>
@@ -246,7 +237,6 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
             <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
           </div>
         </a>
-        <!-- Sidenav Type -->
         <div class="mt-3">
           <h6 class="mb-0">Sidenav Type</h6>
           <p class="text-sm">Choose between 2 different sidenav types.</p>
@@ -257,7 +247,6 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
           <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
         </div>
         <p class="text-sm d-xl-none d-block mt-2">hanya bisa merubah tampilan di dekstop</p>
-        <!-- Navbar Fixed -->
         <div class="mt-3 d-flex">
           <h6 class="mb-0">Navbar Fixed</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
@@ -274,7 +263,6 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
       </div>
     </div>
   </div>
-  <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -288,9 +276,7 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
-  <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.min.js?v=3.0.2"></script>
 </body>
 

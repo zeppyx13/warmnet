@@ -5,13 +5,24 @@ img {
   margin-top: 10px;
   margin-left: 50px;
 }
-
+.w {
+  margin-top: -17px;
+}
+.i {
+  margin-top: -6px;
+}
 @media (min-width: 992px) {
   .g1 {
     margin-left: 400px;
   }
   .g2 {
     margin-left: 200px;
+  }
+  .w {
+    margin-top: 0px;
+  }
+  .i {
+    margin-top: 0px;
   }
 }
 @media (max-width: 575px) {

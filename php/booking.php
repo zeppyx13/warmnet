@@ -124,7 +124,7 @@ if (isset($_POST["submit"])) {
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="file" class="form-control" name="gambar" id="subject" placeholder="Subject">
+                                                    <input type="file" required class="form-control" name="gambar" id="subject" placeholder="Subject">
                                                 </div>
                                                 <input hidden type="text" name="email" value="<?= $email ?>">
                                             </div>

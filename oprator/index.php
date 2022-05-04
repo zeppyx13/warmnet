@@ -321,7 +321,6 @@ $hsl = $dta["harian"];
                                 </thead>
 
                                 <tbody>
-                                    <!-- loop daftar pc -->
                                     <?php $i = 1; ?>
                                     <?php foreach ($pc as $row) : ?>
                                         <tr>
@@ -349,7 +348,6 @@ $hsl = $dta["harian"];
                                         </tr>
                                         <?php $i++; ?>
                                     <?php endforeach; ?>
-                                    <!--akhir  loop daftar pc -->
                                 </tbody>
                             </table>
                         </div>
@@ -436,7 +434,6 @@ $hsl = $dta["harian"];
             </div>
         </div>
     </div>
-    <!--  -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -489,7 +486,6 @@ $hsl = $dta["harian"];
             </div>
         </div>
     </div>
-    <!--   Core JS Files   -->
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/core/bootstrap.min.js"></script>
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -759,9 +755,7 @@ $hsl = $dta["harian"];
             myInput.focus()
         })
     </script>
-    <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/material-dashboard.min.js?v=3.0.2"></script>
 </body>
 

@@ -39,7 +39,7 @@ if (!isset($_SESSION["login"])) {
   <section class="form">
     <div class="form valign">
       <h2>FORM BOOKING</h2>
-      <form class="row g-3" action="../php/booking.php" method="POST" enctype="multipart/form-data">
+      <form style="padding: 20px;" class="row g-3" action="../php/booking.php" method="POST" enctype="multipart/form-data">
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <label for="inputEmail" class="form-label">Paket</label>
@@ -73,8 +73,8 @@ if (!isset($_SESSION["login"])) {
           <input type="time" class="form-control" id="waktupenggunaan" placeholder="15.00" name="jam">
         </div>
         <div class="col-4">
-          <label for="waktupenggunaan" class="form-label">Waktu Penggunaan</label>
-          <input type="text" required autocomplete="off" class="form-control" id="waktupenggunaan" placeholder="1 Jam" name="waktu">
+          <label for="waktupenggunaan" class="w form-label">Waktu Penggunaan</label>
+          <input type="text" required autocomplete="off" class="i form-control" id="waktupenggunaan" placeholder="1 Jam" name="waktu">
         </div>
         <div class="col-md-4">
           <img class="g1" src="img/1.png" alt="Gambar" width="215px" height="215px" />

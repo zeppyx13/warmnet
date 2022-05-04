@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
 $email = $_GET['email'];
-$hapus = mysqli_query($koneksi, "DELETE billing,booking FROM billing JOIN booking ON billing.email = booking.email AND billing.email = '$email'");
+$hapus = mysqli_query($koneksi, "DELETE FROM billing WHERE email = '$email'");
 if ($hapus > 0) {
 
     echo "<script>
