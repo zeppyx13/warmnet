@@ -1,5 +1,5 @@
 <?php
-$konek = mysqli_connect('localhost', 'root', '', 'warnet');
+$konek = mysqli_connect('localhost', 'root', '', 'warmnet');
 
 function query($query)
 {
