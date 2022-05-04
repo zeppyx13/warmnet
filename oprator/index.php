@@ -16,7 +16,6 @@ $dt = mysqli_fetch_assoc($qy);
 $hl = $dt["total"];
 $dta = mysqli_fetch_assoc($qry);
 $hsl = $dta["harian"];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -308,6 +307,7 @@ $hsl = $dta["harian"];
                 <div class="card h-100">
                     <div class="card-header pb-0">
                         <h6>Daftar Pc</h6>
+                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" style="text-align: end;" class="btn btn-instagram">ubah status</button>
                     </div>
                     <div class="card-body px-0 pb-2">
                         <div class="table-responsive">
@@ -432,6 +432,59 @@ $hsl = $dta["harian"];
                     <div class="form-check form-switch ps-0 ms-auto my-auto">
                         <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="../php/status.php" method="POST">
+                        <div class="col-md-12">
+                            <label for="pc" class="form-label">Komputer</label>
+                            <select required class="form-select" aria-label="Default select example" id="pc" name="id">
+                                <option value="bkn" selected>Pilih PC</option>
+                                <option value="1">PC 1 </option>
+                                <option value="2">PC 2 </option>
+                                <option value="3">PC 3 </option>
+                                <option value="4">PC 4 </option>
+                                <option value="5">PC 5 </option>
+                                <option value="6">PC 6 </option>
+                                <option value="7">PC 7 </option>
+                                <option value="8">PC 8 </option>
+                                <option value="9">PC 9 </option>
+                                <option value="10">PC 10 </option>
+                                <option value="11">PC 11 </option>
+                                <option value="12">PC 12 </option>
+                                <option value="13">PC 13 </option>
+                                <option value="14">PC 14 </option>
+                                <option value="15">PC 15 </option>
+                                <option value="16">PC 16 </option>
+                                <option value="17">PC 17 </option>
+                                <option value="18">PC 18 </option>
+                                <option value="19">PC 19 </option>
+                                <option value="20">PC 20 </option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="status" class="form-label">Status</label>
+                            <select required class="form-select" aria-label="Default select example" id="status" name="status">
+                                <option selected value="ready">ready</option>
+                                <option value="full">Full</option>
+                            </select>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Save changes</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -697,6 +750,14 @@ $hsl = $dta["harian"];
             }
             Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
         }
+    </script>
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function() {
+            myInput.focus()
+        })
     </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
