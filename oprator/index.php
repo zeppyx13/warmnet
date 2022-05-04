@@ -4,11 +4,19 @@ if (!isset($_SESSION["admin"])) {
     header("Location: ../");
     exit;
 }
+include "../php/koneksi.php";
 require '../php/backend.php';
 $user = count(query("SELECT * FROM pelanggan WHERE lvl='user'"));
 $hasil = count(query("SELECT * FROM booking"));
 $data = query("SELECT * FROM booking");
 $pc = query("SELECT * FROM komputer");
+$qry = mysqli_query($koneksi, "SELECT * FROM pendapatan ORDER BY id DESC");
+$qy = mysqli_query($koneksi, "SELECT SUM(harian) AS total FROM pendapatan");
+$dt = mysqli_fetch_assoc($qy);
+$hl = $dt["total"];
+$dta = mysqli_fetch_assoc($qry);
+$hsl = $dta["harian"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -145,7 +153,7 @@ $pc = query("SELECT * FROM komputer");
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Daily earning</p>
-                                <h4 class="mb-0">Rp.2.000.000</h4>
+                                <h4 class="mb-0">Rp. <?php echo $hsl ?></h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
@@ -196,7 +204,7 @@ $pc = query("SELECT * FROM komputer");
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">total earning</p>
-                                <h4 class="mb-0">Rp. 10.000.000</h4>
+                                <h4 class="mb-0">Rp. <?php echo $hl ?></h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">

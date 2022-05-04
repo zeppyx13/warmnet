@@ -63,9 +63,9 @@
 <body class="main-layout">
    <!-- loader  -->
 
-   <!-- <div class="loader_bg">
+   <div class="loader_bg">
       <div class="loader"><img src="landing/images/loding2.gif" alt="#" /></div>
-   </div> -->
+   </div>
 
    <!-- end loader -->
    <header>
