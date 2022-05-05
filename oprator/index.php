@@ -285,7 +285,7 @@ $hsl = $dta["harian"];
                                                 </td>
                                                 <td class="align-middle">
                                                     <div class="progress-wrapper w-75 mx-auto">
-                                                        <p><?= $row["waktu"]; ?></p>
+                                                        <p><?= $row["waktu"]; ?> jam</p>
                                                     </div>
                             </div>
                             </td>

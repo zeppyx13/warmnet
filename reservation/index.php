@@ -74,7 +74,7 @@ if (!isset($_SESSION["login"])) {
         </div>
         <div class="col-4">
           <label for="waktupenggunaan" class="w form-label">Waktu Penggunaan</label>
-          <input type="text" required autocomplete="off" class="i form-control" id="waktupenggunaan" placeholder="1 Jam" name="waktu">
+          <input type="number" required autocomplete="off" class="i form-control" id="waktupenggunaan" placeholder="1 Jam" name="waktu">
         </div>
         <div class="col-md-4">
           <img class="g1" src="img/1.png" alt="Gambar" width="215px" height="215px" />

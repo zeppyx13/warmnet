@@ -65,6 +65,7 @@ $data = mysqli_fetch_assoc($query);
 																				error_reporting(0);
 																				if ($dta[7] > 0) {
 																					echo $dta[7];
+																					echo " Jam";
 																				} else {
 																					echo "anda belum memiliki paket";
 																					echo "<br>";

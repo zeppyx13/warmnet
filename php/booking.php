@@ -1,6 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION["login"])) {
+error_reporting(0);
+if (!isset($_SESSION["login"]) || ($_SESSION["admin"])) {
     header("Location:../");
     exit;
 }
@@ -23,6 +24,13 @@ if (isset($_POST["submit"])) {
     $jam = $_POST['jam'];
     $waktu = $_POST['waktu'];
     $simpan = mysqli_query($koneksi, "INSERT INTO booking VALUES('','$paket ','$nama','$email','$tlp','$date','$jam','$waktu')");
+}
+if ($paket = "Super Besar") {
+    $harga = 25000 * $waktu;
+} else if ($paket = "Panas") {
+    $harga = 15000 * $waktu;
+} else if ($paket = "Hemat") {
+    $harga = 10000 * $waktu;
 }
 ?>
 <!doctype html>
@@ -48,7 +56,7 @@ if (isset($_POST["submit"])) {
     <link rel="icon" type="image/png" href="../assets/ico/favicon-128.png" sizes="128x128" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -65,7 +73,7 @@ if (isset($_POST["submit"])) {
                         <div class="row no-gutters">
                             <div class="col-md-7 d-flex align-items-stretch">
                                 <div class="contact-wrap w-100 p-md-5 p-4">
-                                    <h3 class="mb-4">Payment</h3>
+                                    <h2 class="mb-4">Payment</h2>
                                     <div id="form-message-warning" class="mb-4"></div>
                                     <div id="form-message-success" class="mb-4">
                                         Your message was sent, thank you!
@@ -76,7 +84,7 @@ if (isset($_POST["submit"])) {
                                                 <div class="form-group">
                                                     <!-- chech radio -->
                                                     <div class="form-check">
-                                                        <h5 style="text-align: center;">Method :</h5>
+                                                        <h6 style="text-align:left;">Method :</h6>
                                                         <input class="form-check-input" type="radio" name="metode" id="exampleRadios1" value="BCA">
                                                         <label class="form-check-label" for="exampleRadios1">
                                                             Transfer BCA
@@ -121,10 +129,11 @@ if (isset($_POST["submit"])) {
                                                     <!-- chech radio -->
                                                 </div>
                                             </div>
-
                                             <div class="col-md-12">
                                                 <div class="form-group">
+                                                    <h6 style="text-align:left;">Bukti : </h6>
                                                     <input type="file" required class="form-control" name="gambar" id="subject" placeholder="Subject">
+                                                    <p style="margin-top: 7px;"><strong>Total: Rp. <?php echo $harga ?> </strong></p>
                                                 </div>
                                                 <input hidden type="text" name="email" value="<?= $email ?>">
                                             </div>
@@ -184,6 +193,7 @@ if (isset($_POST["submit"])) {
             </div>
         </div>
     </section>
+    <!-- Modal -->
     <?php
     if (isset($_POST["kirim"])) {
         if (tambah($_POST) > 0) {
@@ -206,6 +216,7 @@ if (isset($_POST["submit"])) {
     <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    </script>
 </body>
 
 </html>
