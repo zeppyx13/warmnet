@@ -41,6 +41,7 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.2" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body class="g-sidenav-show bg-gray-200">
@@ -184,6 +185,7 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
                   <label for="bukti">Masukan Bukti pendapatan hari ini:</label><br>
                   <input required id="bukti" name="bukti" type="file"><br> <br>
                   <button type="submit" name="submit" class="btn btn-facebook">Kirim</button>
+                  <a style="margin-left: 30px;" target="_blank" href="../../php/export.php"><button type="button" class="btn btn-primary"> <i class="bi bi-file-earmark-spreadsheet"></i> Export</button></a>
                 </form>
               </ul>
 
