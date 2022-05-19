@@ -154,7 +154,7 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
                       <span class="text-xs">Bukti : <span class="text-dark ms-sm-2 font-weight-bold"><a href="../../assets/bukti/<?= $row["gambar"]; ?>">Click here</a></span></span>
                     </div>
                     <div class="ms-auto text-end">
-                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="../../php/delete.php?email=<?= $row["email"]; ?>"><i class="material-icons text-sm me-2">delete</i>Delete</a>
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="../../php/delete.php?id_transaksi=<?= $row["id_transaksi"]; ?>"><i class="material-icons text-sm me-2">delete</i>Delete</a>
                     </div>
                   </li>
                   <?php $i++; ?>

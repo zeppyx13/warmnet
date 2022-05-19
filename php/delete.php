@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
-$email = $_GET['email'];
-$hapus = mysqli_query($koneksi, "DELETE FROM billing WHERE email = '$email'");
+$id_transaksi = $_GET['id_transaksi'];
+$hapus = mysqli_query($koneksi, "DELETE FROM billing WHERE id_transaksi = '$id_transaksi'");
 if ($hapus > 0) {
 
     echo "<script>
