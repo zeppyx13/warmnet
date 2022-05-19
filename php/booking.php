@@ -32,6 +32,7 @@ if ($paket = "Super Besar") {
 } else if ($paket = "Hemat") {
     $harga = 10000 * $waktu;
 }
+$pembayaran = "" . number_format($harga, 2, ',', '.');
 ?>
 <!doctype html>
 <html lang="en">
@@ -132,8 +133,8 @@ if ($paket = "Super Besar") {
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <h6 style="text-align:left;">Bukti : </h6>
-                                                    <input type="file" required class="form-control" name="gambar" id="subject" placeholder="Subject">
-                                                    <p style="margin-top: 7px;"><strong>Total: Rp. <?php echo $harga ?> </strong></p>
+                                                    <input type="file" class="form-control" name="gambar" id="subject" placeholder="Subject">
+                                                    <p style="margin-top: 7px;"><strong>Total: Rp. <?php echo $pembayaran ?> </strong></p>
                                                 </div>
                                                 <input hidden type="text" name="email" value="<?= $email ?>">
                                             </div>

@@ -16,9 +16,12 @@ function tambah($data)
     global $konek;
     $metode = $data["metode"];
     $email = $data["email"];
-    $gambar = uploadfoto();
-    if (!$gambar) {
-        return false;
+    $gambar = "COD.jpeg";
+    if ($metode  != "COD") {
+        $gambar = uploadfoto();
+        if (!$gambar) {
+            return false;
+        }
     }
     $query = "INSERT INTO billing VALUES('','$gambar','$metode','$email')";
     mysqli_query($konek, $query);
