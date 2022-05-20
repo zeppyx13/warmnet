@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 if (!isset($_SESSION["admin"])) {
     header("Location: ../");
     exit;
@@ -152,7 +153,14 @@ $hsl = $dta["harian"];
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Daily earning</p>
-                                <h4 class="mb-0">Rp. <?php echo $hsl ?></h4>
+                                <h4 class="mb-0">Rp. <?php
+                                                        if ($hsl <= 0) {
+                                                            echo "0";
+                                                        } else {
+                                                            echo $hsl;
+                                                        }
+                                                        ?>
+                                </h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
@@ -203,7 +211,11 @@ $hsl = $dta["harian"];
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">total earning</p>
-                                <h4 class="mb-0">Rp. <?php echo $hl ?></h4>
+                                <h4 class="mb-0">Rp. <?php if ($hl <= 0) {
+                                                            echo "0";
+                                                        } else {
+                                                            echo $hl;
+                                                        } ?></h4>
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
