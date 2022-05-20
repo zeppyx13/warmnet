@@ -15,8 +15,10 @@ $qry = mysqli_query($koneksi, "SELECT * FROM pendapatan ORDER BY id DESC");
 $qy = mysqli_query($koneksi, "SELECT SUM(harian) AS total FROM pendapatan");
 $dt = mysqli_fetch_assoc($qy);
 $hl = $dt["total"];
+$fhl = "" . number_format($hl, 0, ',', '.');
 $dta = mysqli_fetch_assoc($qry);
 $hsl = $dta["harian"];
+$fsl = "" . number_format($hsl, 0, ',', '.');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -154,10 +156,10 @@ $hsl = $dta["harian"];
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Daily earning</p>
                                 <h4 class="mb-0">Rp. <?php
-                                                        if ($hsl <= 0) {
+                                                        if ($fsl <= 0) {
                                                             echo "0";
                                                         } else {
-                                                            echo $hsl;
+                                                            echo $fsl;
                                                         }
                                                         ?>
                                 </h4>
@@ -211,10 +213,10 @@ $hsl = $dta["harian"];
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">total earning</p>
-                                <h4 class="mb-0">Rp. <?php if ($hl <= 0) {
+                                <h4 class="mb-0">Rp. <?php if ($fhl <= 0) {
                                                             echo "0";
                                                         } else {
-                                                            echo $hl;
+                                                            echo $fhl;
                                                         } ?></h4>
                             </div>
                         </div>
