@@ -1,12 +1,25 @@
 <?php
 session_start();
 error_reporting(0);
-if (!isset($_SESSION["login"]) || ($_SESSION["admin"])) {
+if (!isset($_SESSION["login"])) {
     header("Location:../");
     exit;
 }
+$ss = $_SESSION['email'];
 include "koneksi.php";
 require "backend.php";
+$qy = mysqli_query($koneksi, "SELECT * FROM billing WHERE email='$ss' ");
+$dt = mysqli_fetch_row($qy);
+$y = mysqli_query($koneksi, "SELECT * FROM booking WHERE email='$ss' ");
+$t = mysqli_fetch_row($y);
+if ($ss = $dt[3] = $t[3]) {
+    echo "<script>
+    alert('anda telah memiliki paket')
+    document.location.href='../reservation/';
+    </script>
+    ";
+    exit;
+}
 if (isset($_POST["submit"])) {
     $paket = $_POST['paket'];
     if ($paket == "bkn") {
@@ -23,7 +36,18 @@ if (isset($_POST["submit"])) {
     $date = $_POST['date'];
     $jam = $_POST['jam'];
     $waktu = $_POST['waktu'];
-    $simpan = mysqli_query($koneksi, "INSERT INTO booking VALUES('','$paket ','$nama','$email','$tlp','$date','$jam','$waktu')");
+    mysqli_query($koneksi, "INSERT INTO booking VALUES('','$paket ','$nama','$email','$tlp','$date','$jam','$waktu')");
+}
+if (isset($_POST["kirim"])) {
+    if (tambah($_POST) > 0) {
+        echo "<script>
+    alert('pesanan berhasil')
+    document.location.href='../user/';
+    </script>
+    ";
+    } else {
+        echo mysqli_error($konek);
+    }
 }
 if ($paket = "Super Besar") {
     $harga = 25000 * $waktu;
@@ -195,26 +219,9 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
         </div>
     </section>
     <!-- Modal -->
-    <?php
-    if (isset($_POST["kirim"])) {
-        if (tambah($_POST) > 0) {
-            echo "<script>
-        alert('pesanan berhasil')
-        document.location.href='../user/';
-        </script>
-        ";
-        } else {
-            echo mysqli_error($konek);
-        }
-    }
-
-    die;
-
-    ?>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/main.js"></script>
 
     </script>

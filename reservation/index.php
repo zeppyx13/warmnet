@@ -45,9 +45,9 @@ if (!isset($_SESSION["login"])) {
           <label for="inputEmail" class="form-label">Paket</label>
           <select required class="form-select" aria-label="Default select example" id="inputEmail" name="paket">
             <option value="bkn" selected>Pilih Paket</option>
-            <option value="Hemat">Hemat (1-8)</option>
-            <option value="Panas">Panas (9-15)</option>
-            <option value="SuperBesar">SuperBesar 16-20</option>
+            <option value="Hemat">Hemat (1-8)Rp. 10.000)</option>
+            <option value="Panas">Panas (9-15)Rp. 15.000)</option>
+            <option value="SuperBesar">SuperBesar (16-20)Rp. 25.000)</option>
           </select>
         </div>
         <div class="col-md-2"></div>
