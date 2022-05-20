@@ -199,7 +199,7 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
                                             <span class="fa fa-paper-plane"></span>
                                         </div>
                                         <div class="text pl-3">
-                                            <p><span>Email:</span> <a href="mailto:support@warm-net.com">support@warm-net.com</a></p>
+                                            <p><span>Email:</span> <a href="mailto:contact@warm-net.site">contact@warm-net.site</a></p>
                                         </div>
                                     </div>
                                     <div class="dbox w-100 d-flex align-items-center">

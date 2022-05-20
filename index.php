@@ -352,7 +352,7 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <h3>Contact kami</h3>
                   <ul class="conta">
-                     <li>jika ingin bertanya<br> Hubungi ke <br>Email contact@warmnet.com<br> atau bisa ke WhatsApp <br>+6281-877-980-779</li>
+                     <li>jika ingin bertanya<br> Hubungi ke <br>Email contact@warm-net.site<br> atau bisa ke WhatsApp <br>+6281-877-980-779</li>
                   </ul>
                </div>
             </div>
