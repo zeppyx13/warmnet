@@ -12,13 +12,24 @@ $qy = mysqli_query($koneksi, "SELECT * FROM billing WHERE email='$ss' ");
 $dt = mysqli_fetch_row($qy);
 $y = mysqli_query($koneksi, "SELECT * FROM booking WHERE email='$ss' ");
 $t = mysqli_fetch_row($y);
+if (isset($_POST["kirim"])) {
+    if (tambah($_POST) > 0) {
+        echo "<script>
+    alert('pesanan berhasil')
+    document.location.href='../user/';
+    </script>
+    ";
+    } else {
+        echo mysqli_error($konek);
+    }
+}
 if ($ss = $dt[3] = $t[3]) {
-    // echo "<script>
-    // alert('anda telah memiliki paket')
-    // document.location.href='../reservation/';
-    // </script>
-    // ";
-    // exit;
+    echo "<script>
+    alert('anda telah memiliki paket')
+    document.location.href='../reservation/';
+    </script>
+    ";
+    exit;
 }
 if (isset($_POST["submit"])) {
     $paket = $_POST['paket'];
@@ -38,17 +49,7 @@ if (isset($_POST["submit"])) {
     $waktu = $_POST['waktu'];
     mysqli_query($koneksi, "INSERT INTO booking VALUES('','$paket ','$nama','$email','$tlp','$date','$jam','$waktu')");
 }
-if (isset($_POST["kirim"])) {
-    if (tambah($_POST) > 0) {
-        echo "<script>
-    alert('pesanan berhasil')
-    document.location.href='../user/';
-    </script>
-    ";
-    } else {
-        echo mysqli_error($konek);
-    }
-}
+
 if ($paket == "SuperBesar") {
     $harga = 25000 * $waktu;
 } else if ($paket == "Panas") {
