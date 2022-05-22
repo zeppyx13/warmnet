@@ -13,12 +13,12 @@ $dt = mysqli_fetch_row($qy);
 $y = mysqli_query($koneksi, "SELECT * FROM booking WHERE email='$ss' ");
 $t = mysqli_fetch_row($y);
 if ($ss = $dt[3] = $t[3]) {
-    echo "<script>
-    alert('anda telah memiliki paket')
-    document.location.href='../reservation/';
-    </script>
-    ";
-    exit;
+    // echo "<script>
+    // alert('anda telah memiliki paket')
+    // document.location.href='../reservation/';
+    // </script>
+    // ";
+    // exit;
 }
 if (isset($_POST["submit"])) {
     $paket = $_POST['paket'];
@@ -49,11 +49,11 @@ if (isset($_POST["kirim"])) {
         echo mysqli_error($konek);
     }
 }
-if ($paket = "Super Besar") {
+if ($paket == "Super Besar") {
     $harga = 25000 * $waktu;
-} else if ($paket = "Panas") {
+} else if ($paket == "Panas") {
     $harga = 15000 * $waktu;
-} else if ($paket = "Hemat") {
+} else if ($paket == "Hemat") {
     $harga = 10000 * $waktu;
 }
 $pembayaran = "" . number_format($harga, 2, ',', '.');
@@ -107,46 +107,45 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <!-- chech radio -->
                                                     <div class="form-check">
                                                         <h6 style="text-align:left;">Method :</h6>
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios1" value="BCA">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios1" onclick="tambah()" value="BCA">
                                                         <label class="form-check-label" for="exampleRadios1">
                                                             Transfer BCA
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios2" value="BNI">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios2" onclick="tambah()" value="BNI">
                                                         <label class="form-check-label" for="exampleRadios2">
                                                             Transfer BNI
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios3" value="BRI">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios3" onclick="tambah()" value="BRI">
                                                         <label class="form-check-label" for="exampleRadios3">
                                                             Transfer BRI
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios4" value="Mandiri">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios4" onclick="tambah()" value="Mandiri">
                                                         <label class="form-check-label" for="exampleRadios4">
                                                             Transfer Mandiri
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios5" value="COD">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios5" onclick="Hilang()" value="COD">
                                                         <label class="form-check-label" for="exampleRadios5">
                                                             COD
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios6" value="OVO">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios6" onclick="tambah()" value="OVO">
                                                         <label class="form-check-label" for="exampleRadios6">
                                                             OVO
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios7" value="GOPAY">
+                                                        <input class="form-check-input" type="radio" name="metode" id="exampleRadios7" onclick="tambah()" value="GOPAY">
                                                         <label class="form-check-label" for="exampleRadios7">
                                                             GOPAY
                                                         </label>
@@ -155,9 +154,11 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <h6 style="text-align:left;">Bukti : </h6>
-                                                    <input type="file" class="form-control" name="gambar" id="subject" placeholder="Subject">
+                                                <div class=" form-group ">
+                                                    <div class="file">
+                                                        <h6 style="text-align:left;">Bukti : </h6>
+                                                        <input type="file" class="inputF form-control" name="gambar" id="subject" placeholder="Subject">
+                                                    </div>
                                                     <p style="margin-top: 7px;"><strong>Total: Rp. <?php echo $pembayaran ?> </strong></p>
                                                 </div>
                                                 <input hidden type="text" name="email" value="<?= $email ?>">
@@ -218,7 +219,17 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
             </div>
         </div>
     </section>
-    <!-- Modal -->
+    <script>
+        const file = document.querySelector('.file');
+
+        function Hilang() {
+            file.classList.add('d-none');
+        }
+
+        function tambah() {
+            file.classList.remove('d-none')
+        }
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
