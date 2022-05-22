@@ -1,3 +1,14 @@
+<?php
+error_reporting(0);
+session_start();
+if (isset($_SESSION["login"])) {
+   $tombol = "<i class='bi bi-house-door'></i> Home";
+} else if (isset($_SESSION["admin"])) {
+   $tombol = "<i class='bi bi-house-door'></i> Home";
+} else {
+   $tombol = "<i class='bi bi-box-arrow-in-right'></i> Login";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +102,7 @@
                               <a class="nav-link" href="#contact">Contact Us</a>
                            </li>
                            <li class="nav-item ">
-                              <a class="nav-link" id="login" href="login.php"><button type="button" style="border-radius: 15px; margin-bottom: 150px; margin-top: -10px;" class="btn btn-linkedin"><i class="bi bi-box-arrow-in-right"></i> Login</button></a>
+                              <a class="nav-link" id="login" href="login.php"><button type="button" style="border-radius: 15px; margin-bottom: 150px; margin-top: -10px;" class="btn btn-linkedin"><?php echo $tombol  ?></button></a>
                            </li>
                         </ul>
                      </div>
