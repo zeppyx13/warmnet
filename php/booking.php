@@ -221,13 +221,16 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
     </section>
     <script>
         const file = document.querySelector('.file');
+        const inputF = document.getElementById('subject')
 
         function Hilang() {
             file.classList.add('d-none');
+            inputF.removeAttribute('required');
         }
 
         function tambah() {
-            file.classList.remove('d-none')
+            file.classList.remove('d-none');
+            inputF.setAttribute('required', '');
         }
     </script>
     <script src="assets/js/jquery.min.js"></script>
