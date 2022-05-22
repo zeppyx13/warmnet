@@ -49,7 +49,7 @@ if (isset($_POST["kirim"])) {
         echo mysqli_error($konek);
     }
 }
-if ($paket == "Super Besar") {
+if ($paket == "SuperBesar") {
     $harga = 25000 * $waktu;
 } else if ($paket == "Panas") {
     $harga = 15000 * $waktu;
