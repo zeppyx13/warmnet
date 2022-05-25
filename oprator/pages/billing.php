@@ -42,6 +42,8 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.2" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="../../php/ajax/js/jquery-3.6.0.min.js"></script>
+  <script src="../../php/ajax/js/script3.js"></script>
 </head>
 
 <body class="g-sidenav-show bg-gray-200">
@@ -108,10 +110,12 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
-            </div>
+            <form action="" method="post">
+              <div class="input-group input-group-outline">
+                <label class="form-label">Type here...</label>
+                <input autocomplete="off" id="keyword" type="text" class="form-control">
+              </div>
+            </form>
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -140,7 +144,7 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
             <div class="card-header pb-0 px-3">
               <h6 class="mb-0">Billing Information</h6>
             </div>
-            <div class="card-body pt-4 p-3">
+            <div id="container" class="card-body pt-4 p-3">
               <ul class="list-group">
                 <?php $i = 1; ?>
                 <?php foreach ($data as $row) : ?>
