@@ -6,14 +6,13 @@ $ubah = mysqli_query($koneksi, "UPDATE komputer SET Status='$status' WHERE Unit_
 if ($ubah) {
 
     echo "<script>
-    alert('Status berhasil di ubah')
     document.location.href='../oprator/';
     </script>
     ";
 } else {
     echo "<script>
     alert('Status gagal di ubah')
-    document.location.href='i../oprator/';
+    document.location.href='../oprator/';
     </script>
     ";
 }
