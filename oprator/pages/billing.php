@@ -5,7 +5,7 @@ if (!isset($_SESSION["admin"])) {
   exit;
 }
 require '../../php/backend.php';
-$data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.metode,booking.email,billing.gambar FROM booking INNER JOIN billing ON booking.email = billing.email");
+$data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.metode,booking.email,billing.gambar FROM booking RIGHT JOIN billing ON booking.email = billing.email");
 ?>
 <!DOCTYPE html>
 <html lang="en">

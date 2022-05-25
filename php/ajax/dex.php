@@ -1,7 +1,7 @@
 <?php
 require '../backend.php';
 $keyword = $_GET['keyword'];
-$query = "SELECT * FROM booking WHERE nama LIKE '%$keyword%' OR email LIKE '%$keyword%' OR tlp LIKE '%$keyword%' OR jam LIKE '%$keyword%' OR id LIKE '%$keyword%' OR jam LIKE '%$keyword%'";
+$query = "SELECT * FROM booking WHERE nama LIKE '%$keyword%' OR email LIKE '%$keyword%' OR tlp LIKE '%$keyword%' OR jam LIKE '%$keyword%' OR id LIKE '%$keyword%' OR jam LIKE '%$keyword%' OR paket LIKE '%$keyword%' OR date LIKE '%$keyword%'";
 $cari = query($query);
 ?>
 <table class="table align-items-center mb-0">

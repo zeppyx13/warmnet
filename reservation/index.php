@@ -64,13 +64,13 @@ if (!isset($_SESSION["login"])) {
         </div>
         <div class="col-4">
           <label for="tglbln" class="form-label">Tgl Bulan</label>
-          <input type="date" class="form-control" id="tglbln" placeholder="1 Januari" name="date">
+          <input type="date" class="form-control" id="tglbln" placeholder="1 Januari" required name="date">
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-2"></div>
         <div class="col-4">
           <label for="waktupenggunaan" class="form-label">Jam</label>
-          <input type="time" class="form-control" id="waktupenggunaan" placeholder="15.00" name="jam">
+          <input type="time" required class="form-control" id="waktupenggunaan" placeholder="15.00" name="jam">
         </div>
         <div class="col-4">
           <label for="waktupenggunaan" class="w form-label">Waktu Penggunaan</label>
