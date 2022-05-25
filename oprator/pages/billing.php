@@ -149,30 +149,32 @@ $fhl = number_format($hl, 2, ',', '.');
             <div class="card-header pb-0 px-3">
               <h6 class="mb-0">Billing Information</h6>
             </div>
-            <div id="container" class="card-body pt-4 p-3">
-              <ul class="list-group">
-                <?php $i = 1; ?>
-                <?php foreach ($data as $row) :
-                  $total =  $row["jumlah"];
-                  $pembayaran = "" . number_format($total, 0, ',', '.');
-                ?>
-                  <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-3 text-sm"><?= $row["nama"]; ?></h6>
-                      <span class="text-xs">ID Transaction : <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["id_transaksi"]; ?></span></span>
-                      <span class="text-xs">tlp: <span class="text-dark font-weight-bold ms-sm-2"><?= $row["tlp"]; ?></span></span>
-                      <span class="text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["email"]; ?></span></span>
-                      <span class="text-xs">Jumlah pembayaran:<span class="text-dark ms-sm-2 font-weight-bold">Rp.<?= $pembayaran ?></span></span>
-                      <span class="text-xs">methode: <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["metode"]; ?></span></span>
-                      <span class="text-xs">Bukti : <span class="text-dark ms-sm-2 font-weight-bold"><a href="../../assets/bukti/<?= $row["gambar"]; ?>">Click here</a></span></span>
-                    </div>
-                    <div class="ms-auto text-end">
-                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="../../php/delete.php?id_transaksi=<?= $row["id_transaksi"]; ?>"><i class="material-icons text-sm me-2">delete</i>Delete</a>
-                    </div>
-                  </li>
-                  <?php $i++; ?>
-                <?php endforeach; ?>
-              </ul>
+            <div class="card-body pt-4 p-3">
+              <div id="container">
+                <ul class="list-group">
+                  <?php $i = 1; ?>
+                  <?php foreach ($data as $row) :
+                    $total =  $row["jumlah"];
+                    $pembayaran = "" . number_format($total, 0, ',', '.');
+                  ?>
+                    <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-3 text-sm"><?= $row["nama"]; ?></h6>
+                        <span class="text-xs">ID Transaction : <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["id_transaksi"]; ?></span></span>
+                        <span class="text-xs">tlp: <span class="text-dark font-weight-bold ms-sm-2"><?= $row["tlp"]; ?></span></span>
+                        <span class="text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["email"]; ?></span></span>
+                        <span class="text-xs">Jumlah pembayaran:<span class="text-dark ms-sm-2 font-weight-bold">Rp.<?= $pembayaran ?></span></span>
+                        <span class="text-xs">methode: <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["metode"]; ?></span></span>
+                        <span class="text-xs">Bukti : <span class="text-dark ms-sm-2 font-weight-bold"><a href="../../assets/bukti/<?= $row["gambar"]; ?>">Click here</a></span></span>
+                      </div>
+                      <div class="ms-auto text-end">
+                        <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="../../php/delete.php?id_transaksi=<?= $row["id_transaksi"]; ?>"><i class="material-icons text-sm me-2">delete</i>Delete</a>
+                      </div>
+                    </li>
+                    <?php $i++; ?>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
               <div class="footer">
                 <hr>
                 <div class="ms-auto">
