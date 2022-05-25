@@ -9,6 +9,6 @@ keyword.addEventListener("keyup", function () {
     }
   };
 
-  ajax.open("GET", "../assets/ajax/coba.php?keyword=" + keyword.value, true);
+  ajax.open("GET", "../../php/ajax/list.php?keyword=" + keyword.value, true);
   ajax.send();
 });

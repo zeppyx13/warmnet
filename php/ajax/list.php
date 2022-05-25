@@ -1,7 +1,8 @@
 <?php
 require '../backend.php';
 $keyword = $_GET['keyword'];
-$query = "SELECT * FROM planggan WHERE nama LIKE '%$keyword%";
+$query = "SELECT * FROM pelanggan WHERE nama LIKE '%$keyword%' OR email LIKE '%$keyword%' OR tlp LIKE '%$keyword%' OR lvl LIKE '%$keyword%' ";
+$cari = query($query);
 ?>
 <table class="table align-items-center mb-0">
     <thead>
@@ -14,7 +15,7 @@ $query = "SELECT * FROM planggan WHERE nama LIKE '%$keyword%";
     </thead>
     <tbody>
         <?php $i = 1; ?>
-        <?php foreach ($data as $row) : ?>
+        <?php foreach ($cari as $row) : ?>
             <tr>
                 <td>
                     <div class="d-flex px-2 py-1">

@@ -177,9 +177,6 @@ function ubah($data)
     mysqli_query($konek, $query);
     return mysqli_affected_rows($konek);
 }
-function cari($data)
-{
-}
 // fuction login/register user
 function registrasi($data)
 {

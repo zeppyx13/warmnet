@@ -5,7 +5,7 @@ if (!isset($_SESSION["admin"])) {
   exit;
 }
 include "../../php/backend.php";
-$data = query("SELECT * FROM pelanggan WHERE lvl='user'");
+$data = query("SELECT * FROM pelanggan");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,10 +108,12 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
-            </div>
+            <form action="" method="post">
+              <div class="input-group input-group-outline">
+                <label class="form-label">Type here...</label>
+                <input autocomplete="off" id="keyword" name="keyword" type="text" class="form-control">
+              </div>
+            </form>
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -143,14 +145,14 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
               </div>
             </div>
             <div class="card-body px-0 pb-2">
-              <div class="table-responsive p-0">
+              <div id="container" class="table-responsive p-0">
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Telphone</th>
-                      <th class="text-secondary opacity-7"></th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -172,6 +174,9 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
                         </td>
                         <td class="align-middle text-center text-sm">
                           <span class=""><?= $row['tlp']; ?></span>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                          <span class=""><?= $row['lvl']; ?></span>
                         </td>
                       </tr>
                       <?php $i++; ?>
@@ -263,6 +268,7 @@ $data = query("SELECT * FROM pelanggan WHERE lvl='user'");
       </div>
     </div>
   </div>
+  <script src="../../php/ajax/script.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
