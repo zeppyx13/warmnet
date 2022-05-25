@@ -17,13 +17,14 @@ function tambah($data)
     $metode = $data["metode"];
     $email = $data["email"];
     $gambar = "COD.jpeg";
+    $jumlah = $data["jumlah"];
     if ($metode  != "COD") {
         $gambar = uploadfoto();
         if (!$gambar) {
             return false;
         }
     }
-    $query = "INSERT INTO billing VALUES('','$gambar','$metode','$email')";
+    $query = "INSERT INTO billing VALUES('','$gambar','$metode','$email','$jumlah')";
     mysqli_query($konek, $query);
     return mysqli_affected_rows($konek);
 }

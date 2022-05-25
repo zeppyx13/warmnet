@@ -163,6 +163,7 @@ $pembayaran = "" . number_format($harga, 2, ',', '.');
                                                     <p style="margin-top: 7px;"><strong>Total: Rp. <?php echo $pembayaran ?> </strong></p>
                                                 </div>
                                                 <input hidden type="text" name="email" value="<?= $email ?>">
+                                                <input hidden type="text" name="jumlah" value="<?= $harga ?>">
                                             </div>
                                             <div class="col-md-12">
 

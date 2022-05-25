@@ -5,7 +5,12 @@ if (!isset($_SESSION["admin"])) {
   exit;
 }
 require '../../php/backend.php';
-$data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.metode,booking.email,billing.gambar FROM booking RIGHT JOIN billing ON booking.email = billing.email");
+include '../../php/koneksi.php';
+$data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.metode,booking.email,billing.gambar,billing.jumlah FROM booking RIGHT JOIN billing ON booking.email = billing.email");
+$ttl = mysqli_query($koneksi, "SELECT SUM(jumlah) AS total FROM billing");
+$dt = mysqli_fetch_assoc($ttl);
+$hl = $dt["total"];
+$fhl = number_format($hl, 2, ',', '.');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,13 +152,17 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
             <div id="container" class="card-body pt-4 p-3">
               <ul class="list-group">
                 <?php $i = 1; ?>
-                <?php foreach ($data as $row) : ?>
+                <?php foreach ($data as $row) :
+                  $total =  $row["jumlah"];
+                  $pembayaran = "" . number_format($total, 0, ',', '.');
+                ?>
                   <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                     <div class="d-flex flex-column">
                       <h6 class="mb-3 text-sm"><?= $row["nama"]; ?></h6>
                       <span class="text-xs">ID Transaction : <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["id_transaksi"]; ?></span></span>
                       <span class="text-xs">tlp: <span class="text-dark font-weight-bold ms-sm-2"><?= $row["tlp"]; ?></span></span>
                       <span class="text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["email"]; ?></span></span>
+                      <span class="text-xs">Jumlah pembayaran:<span class="text-dark ms-sm-2 font-weight-bold">Rp.<?= $pembayaran ?></span></span>
                       <span class="text-xs">methode: <span class="text-dark ms-sm-2 font-weight-bold"><?= $row["metode"]; ?></span></span>
                       <span class="text-xs">Bukti : <span class="text-dark ms-sm-2 font-weight-bold"><a href="../../assets/bukti/<?= $row["gambar"]; ?>">Click here</a></span></span>
                     </div>
@@ -164,6 +173,16 @@ $data = query("SELECT booking.nama,booking.tlp,billing.id_transaksi,billing.meto
                   <?php $i++; ?>
                 <?php endforeach; ?>
               </ul>
+              <div class="footer">
+                <hr>
+                <div class="ms-auto">
+                  <Strong>total pendapatan :Rp. <?php if ($fhl <= 0) {
+                                                  echo "0";
+                                                } else {
+                                                  echo $fhl;
+                                                } ?></Strong>
+                </div>
+              </div>
             </div>
           </div>
         </div>
