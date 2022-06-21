@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/public_html/
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp login.php $DEPLOYPATH
+    - /bin/cp register.php $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp -R fonts $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R landing $DEPLOYPATH
+    - /bin/cp -R oprator $DEPLOYPATH
+    - /bin/cp -R reservation $DEPLOYPATH
+    - /bin/cp -R scss $DEPLOYPATH
+    - /bin/cp -R user $DEPLOYPATH
