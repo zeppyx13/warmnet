@@ -20,5 +20,16 @@ header("Content-Disposition:attachment;filename=Data Pendapatan Warmnet.xlsx");
         <td>$hasil[1]</td>
         <td>https://warm-net.site/assets/bukti/report/$hasil[2]</td>
 </tr>";
+    $query = mysqli_query($koneksi, "SELECT SUM(harian) AS total FROM pendapatan");
+    $qy2 = mysqli_fetch_assoc($query);
+    $total = $qy2["total"];
+    $ftotal = "" . number_format($total, 0, ',', '.');
+    echo "
+<tr>
+<td>Total :</td>
+<td>$ftotal</td>
+</tr>
+";
+
     ?>
 </table>
