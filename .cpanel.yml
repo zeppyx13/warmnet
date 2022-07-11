@@ -11,6 +11,7 @@ deployment:
     - /bin/cp -R js $DEPLOYPATH
     - /bin/cp -R landing $DEPLOYPATH
     - /bin/cp -R oprator $DEPLOYPATH
+    - /bin/cp -R php $DEPLOYPATH
     - /bin/cp -R reservation $DEPLOYPATH
     - /bin/cp -R scss $DEPLOYPATH
     - /bin/cp -R user $DEPLOYPATH
