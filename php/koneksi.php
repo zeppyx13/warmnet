@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "warmnet");
+$koneksi = mysqli_connect("localhost", "warmnets_gungnanda", "dXUtqbL5avEwmZJ", "warmnets_db");
 
 // Check connection
 if (mysqli_connect_errno()) {
