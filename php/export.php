@@ -18,7 +18,7 @@ header("Content-Disposition:attachment;filename=Data Pendapatan Warmnet.xlsx");
 <tr>
         <td>$hasil[0]</td>
         <td>$hasil[1]</td>
-        <td>https://warm-net.site/assets/bukti/$hasil[2]</td>
+        <td>https://warm-net.site/assets/bukti/report/$hasil[2]</td>
 </tr>";
     ?>
 </table>
