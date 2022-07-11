@@ -159,13 +159,13 @@ $fsl = "" . number_format($hsl, 0, ',', '.');
                             </div>
                             <div class="text-end pt-1">
                                 <p class="text-sm mb-0 text-capitalize">Daily earning</p>
-                                <h4 class="mb-0">Rp. <?php
-                                                        if ($fsl <= 0) {
-                                                            echo "0";
-                                                        } else {
-                                                            echo $fsl;
-                                                        }
-                                                        ?>
+                                <h4 id="harian" class="mb-0">Rp. <?php
+                                                                    if ($fsl <= 0) {
+                                                                        echo "0";
+                                                                    } else {
+                                                                        echo $fsl;
+                                                                    }
+                                                                    ?>
                                 </h4>
                             </div>
                         </div>
@@ -502,6 +502,7 @@ $fsl = "" . number_format($hsl, 0, ',', '.');
             </div>
         </div>
     </div>
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/core/bootstrap.min.js"></script>
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>

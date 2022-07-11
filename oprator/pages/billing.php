@@ -209,8 +209,9 @@ $fhl = number_format($hl, 2, ',', '.');
                   <input required id="hari" name="hari" type="number"><br><br>
                   <label for="bukti">Masukan Bukti pendapatan hari ini:</label><br>
                   <input required id="bukti" name="bukti" type="file"><br> <br>
-                  <button type="submit" name="submit" class="btn btn-facebook">Kirim</button>
-                  <a style="margin-left: 30px;" target="_blank" href="../../php/export.php"><button type="button" class="btn btn-primary"> <i class="bi bi-file-earmark-spreadsheet"></i> Export</button></a>
+                  <button type="submit" name="submit" class="btn btn-facebook">Submit</button>
+                  <a href="../../php/time.php"><button onclick="return confirm('Yakin ingin reset pendapatan?')" type="button" class="btn btn-instagram">Reset daily income</button></a>
+                  <a target="_blank" href="../../php/export.php"><button type="button" class="btn btn-primary"> <i class="bi bi-file-earmark-spreadsheet"></i> Export</button></a>
                 </form>
               </ul>
 
