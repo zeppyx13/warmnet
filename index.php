@@ -18,13 +18,8 @@ if (isset($_SESSION["login"])) {
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <title>Warm-net || Home</title>
-   <meta name="keywords" content="warmnet">
-   <meta name="keywords" content="warm-net">
-   <meta name="keywords" content="warnet">
-   <meta name="keywords" content="situs booking warnet">
-   <meta name="keywords" content="warm-net">
-   <meta name="keywords" content="Warnet">
-   <meta name="keywords" content="penyewaan komputer">
+   <meta http-equiv="refresh" content="3600" ;="" url="https://warm-net.site/">
+   <meta name="keywords" content="warnet,warmnet,warm-nets,warm-net,situs booking warnet,penyewaan komputer,booking pc">
    <meta name="description" content="Warm-Net,adalah sebuah usaha penyewaan komputer kepada pelanggan dengan tarif dan waktu tertentu,atau biasa disebut Warnet atau Warung internet.">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
    <link rel="stylesheet" href="landing/css/bootstrap.min.css">
