@@ -40,6 +40,7 @@ if (isset($_SESSION["login"])) {
    <link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" />
    <link rel="icon" type="image/png" href="assets/ico/favicon-128.png" sizes="128x128" />
    <meta name="application-name" content="&nbsp;" />
+   <meta name="description" content="situs pembookingan warmnet kami yang tersebar di bebagai daerah untuk memenuhi keinginan kalian bermain game dan nugas">
    <meta name="msapplication-TileColor" content="#FFFFFF" />
    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
