@@ -18,9 +18,14 @@ if (isset($_SESSION["login"])) {
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <title>Warm-net || Home</title>
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
+   <meta name="keywords" content="warmnet">
+   <meta name="keywords" content="warm-net">
+   <meta name="keywords" content="warnet">
+   <meta name="keywords" content="situs booking warnet">
+   <meta name="keywords" content="warm-net">
+   <meta name="keywords" content="Warnet">
+   <meta name="keywords" content="penyewaan komputer">
+   <meta name="description" content="Warm-Net,adalah sebuah usaha penyewaan komputer kepada pelanggan dengan tarif dan waktu tertentu,atau biasa disebut Warnet atau Warung internet.">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
    <link rel="stylesheet" href="landing/css/bootstrap.min.css">
    <link rel="stylesheet" href="landing/css/style.css">
@@ -40,7 +45,6 @@ if (isset($_SESSION["login"])) {
    <link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" />
    <link rel="icon" type="image/png" href="assets/ico/favicon-128.png" sizes="128x128" />
    <meta name="application-name" content="&nbsp;" />
-   <meta name="description" content="situs pembookingan warmnet kami yang tersebar di bebagai daerah untuk memenuhi keinginan kalian bermain game dan nugas">
    <meta name="msapplication-TileColor" content="#FFFFFF" />
    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
