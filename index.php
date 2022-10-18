@@ -372,7 +372,7 @@ if (isset($_SESSION["login"])) {
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <p>© 2022 All Rights Reserved. Design by Warm-net team
+                     <p>© 2022 All Rights Reserved. Design by Warm-net team on 12 RPL 1
                      </p>
                   </div>
                </div>
