@@ -69,9 +69,6 @@ if (isset($_SESSION["login"])) {
 </head>
 
 <body class="main-layout">
-   <div class="loader_bg">
-      <div class="loader"><img src="landing/images/loding2.gif" alt="#" /></div>
-   </div>
    <header>
       <div class="header">
          <div class="container-fluid">
