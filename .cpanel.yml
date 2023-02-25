@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/warm8772/repositories/warmnet/public_html/
+    - export DEPLOYPATH=/home/warm8772/public_html/
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp login.php $DEPLOYPATH
     - /bin/cp register.php $DEPLOYPATH
